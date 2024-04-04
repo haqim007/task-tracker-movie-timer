@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <item
+        android:id="@+id/taskListFragment_dest"
+        android:icon="@drawable/baseline_checklist_24"
+        android:title="@string/task" />
+
+    <item
+        android:id="@+id/movieListFragment_dest"
+        android:icon="@drawable/ic_movie_24"
+        android:title="@string/movies" />
+
+    <item
+        android:id="@+id/timerFragment_dest"
+        android:icon="@drawable/baseline_av_timer_24"
+        android:title="@string/timer" />
+
+</menu>

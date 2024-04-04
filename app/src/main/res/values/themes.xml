@@ -1,0 +1,32 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.DailyTaskTracker" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item> <!-- Primary color -->
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item> <!-- Variant of the primary color -->
+        <item name="colorOnPrimary">@color/colorOnPrimary</item> <!-- Text color on primary color -->
+        <item name="colorPrimaryContainer">@color/colorPrimaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/colorOnPrimaryContainer</item>
+
+        <item name="android:windowLightStatusBar">true</item>
+
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorSecondary">@color/colorSecondary</item> <!-- Secondary color -->
+        <item name="colorSecondaryContainer">@color/colorSecondaryContainer</item>
+        <item name="colorOnSecondaryContainer">@color/colorOnSecondaryContainer</item>
+        <item name="colorSecondaryVariant">@color/colorSecondaryVariant</item> <!-- Variant of the secondary color -->
+        <item name="colorOnSecondary">@color/colorOnSecondary</item> <!-- Text color on secondary color -->
+
+        <item name="colorSurface">@color/colorSurface</item> <!-- Surface color -->
+        <item name="colorOnSurface">@color/colorOnSurface</item> <!-- Text color on surface color -->
+
+        <item name="toolbarStyle">@style/Theme.Custom.Toolbar</item>
+        <item name="titleTextColor">@color/colorOnPrimary</item>
+    </style>
+
+    <style name="Theme.Custom.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="android:background">@color/colorPrimaryVariant</item>
+    </style>
+
+    <style name="Theme.DailyTaskTracker" parent="Base.Theme.DailyTaskTracker" />
+</resources>

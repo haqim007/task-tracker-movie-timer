@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main.xml"
+    app:startDestination="@id/taskListFragment_dest">
+
+    <fragment
+        android:id="@+id/taskListFragment_dest"
+        android:name="dev.haqim.dailytasktracker.ui.tasks.todo.list.TaskListFragment"
+        android:label="fragment_task_list"
+        tools:layout="@layout/fragment_task_list" >
+        <action
+            android:id="@+id/action_taskListFragment_dest_to_categoryListFragment"
+            app:destination="@id/categoryListFragment" />
+<!--        <action-->
+<!--            android:id="@+id/action_taskListFragment_dest_to_categoryPickerListFragment"-->
+<!--            app:destination="@id/categoryPickerListFragment" />-->
+        <action
+            android:id="@+id/action_taskListFragment_dest_to_addTaskFragment"
+            app:destination="@id/addTaskFragment" />
+        <action
+            android:id="@+id/action_taskListFragment_dest_to_updateTaskFragment"
+            app:destination="@id/updateTaskFragment" />
+        <action
+            android:id="@+id/action_taskListFragment_dest_to_categoryFilterListFragment"
+            app:destination="@id/categoryFilterListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieListFragment_dest"
+        android:name="dev.haqim.dailytasktracker.ui.movies.list.MovieListFragment"
+        android:label="fragment_movie_list"
+        tools:layout="@layout/fragment_movie_list" />
+    <fragment
+        android:id="@+id/timerFragment_dest"
+        android:name="dev.haqim.dailytasktracker.ui.timer.TimerFragment"
+        android:label="fragment_timer"
+        tools:layout="@layout/fragment_timer" />
+    <fragment
+        android:id="@+id/categoryListFragment"
+        android:name="dev.haqim.dailytasktracker.ui.tasks.category.list.CategoryListFragment"
+        android:label="fragment_category_list"
+        tools:layout="@layout/fragment_category_list" >
+        <action
+            android:id="@+id/action_categoryListFragment_to_addTaskCategoryFragment"
+            app:destination="@id/addTaskCategoryFragment" />
+        <action
+            android:id="@+id/action_categoryListFragment_to_updateTaskCategoryFragment"
+            app:destination="@id/updateTaskCategoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addTaskCategoryFragment"
+        android:name="dev.haqim.dailytasktracker.ui.tasks.category.create.AddTaskCategoryFragment"
+        android:label="fragment_add_task_category"
+        tools:layout="@layout/fragment_add_task_category" />
+
+    <fragment
+        android:id="@+id/updateTaskCategoryFragment"
+        android:name="dev.haqim.dailytasktracker.ui.tasks.category.update.UpdateTaskCategoryFragment"
+        android:label="fragment_update_task_category"
+        tools:layout="@layout/fragment_add_task_category">
+        <argument
+            android:name="category"
+            app:argType="dev.haqim.dailytasktracker.domain.model.TaskCategory"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/categoryPickerListFragment"
+        android:name="dev.haqim.dailytasktracker.ui.tasks.category.picker.CategoryPickerListFragment"
+        android:label="CategoryPickerListFragment"
+        tools:layout="@layout/fragment_category_list">
+        <action
+            android:id="@+id/action_categoryPickerListFragment_to_addTaskCategoryFragment"
+            app:destination="@id/addTaskCategoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addTaskFragment"
+        android:name="dev.haqim.dailytasktracker.ui.tasks.todo.form.create.AddTaskFragment"
+        android:label="fragment_add_task"
+        tools:layout="@layout/fragment_add_task" >
+        <action
+            android:id="@+id/action_addTaskFragment_to_categoryPickerListFragment"
+            app:destination="@id/categoryPickerListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateTaskFragment"
+        android:name="dev.haqim.dailytasktracker.ui.tasks.todo.form.update.UpdateTaskFragment"
+        android:label="UpdateTaskFragment"
+        tools:layout="@layout/fragment_update_task">
+        <argument
+            android:name="task"
+            app:argType="dev.haqim.dailytasktracker.domain.model.Task"/>
+        <action
+            android:id="@+id/action_updateTaskFragment_to_categoryPickerListFragment"
+            app:destination="@id/categoryPickerListFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/categoryFilterListFragment"
+        android:name="dev.haqim.dailytasktracker.ui.tasks.category.picker.CategoryFilterListFragment"
+        android:label="CategoryFilterListFragment"
+        tools:layout="@layout/fragment_category_list"/>
+</navigation>
